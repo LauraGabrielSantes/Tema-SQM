@@ -3,8 +3,8 @@
  * Custom comment walker for this theme.
  *
  * @package WordPress
- * @subpackage Twenty_Twenty
- * @since Twenty Twenty 1.0
+ * @subpackage SQM
+ * @since SQM 1.0
  */
 
 if ( ! class_exists( 'TwentyTwenty_Walker_Comment' ) ) {
@@ -53,7 +53,7 @@ if ( ! class_exists( 'TwentyTwenty_Walker_Comment' ) ) {
 							printf(
 								'<span class="fn">%1$s</span><span class="screen-reader-text says">%2$s</span>',
 								esc_html( $comment_author ),
-								__( 'says:', 'twentytwenty' )
+								__( 'says:', 'SQM' )
 							);
 
 							if ( ! empty( $comment_author_url ) ) {
@@ -65,7 +65,7 @@ if ( ! class_exists( 'TwentyTwenty_Walker_Comment' ) ) {
 						<div class="comment-metadata">
 							<?php
 							/* translators: 1: Comment date, 2: Comment time. */
-							$comment_timestamp = sprintf( __( '%1$s at %2$s', 'twentytwenty' ), get_comment_date( '', $comment ), get_comment_time() );
+							$comment_timestamp = sprintf( __( '%1$s at %2$s', 'SQM' ), get_comment_date( '', $comment ), get_comment_time() );
 
 							printf(
 								'<a href="%s"><time datetime="%s" title="%s">%s</time></a>',
@@ -79,7 +79,7 @@ if ( ! class_exists( 'TwentyTwenty_Walker_Comment' ) ) {
 								printf(
 									' <span aria-hidden="true">&bull;</span> <a class="comment-edit-link" href="%s">%s</a>',
 									esc_url( get_edit_comment_link() ),
-									__( 'Edit', 'twentytwenty' )
+									__( 'Edit', 'SQM' )
 								);
 							}
 							?>
@@ -95,7 +95,7 @@ if ( ! class_exists( 'TwentyTwenty_Walker_Comment' ) ) {
 
 						if ( '0' === $comment->comment_approved ) {
 							?>
-							<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'twentytwenty' ); ?></p>
+							<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'SQM' ); ?></p>
 							<?php
 						}
 
@@ -118,7 +118,7 @@ if ( ! class_exists( 'TwentyTwenty_Walker_Comment' ) ) {
 						)
 					);
 
-					$by_post_author = twentytwenty_is_comment_by_post_author( $comment );
+					$by_post_author = SQM_is_comment_by_post_author( $comment );
 
 					if ( $comment_reply_link || $by_post_author ) {
 						?>
@@ -130,7 +130,7 @@ if ( ! class_exists( 'TwentyTwenty_Walker_Comment' ) ) {
 								echo $comment_reply_link; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Link is escaped in https://developer.wordpress.org/reference/functions/get_comment_reply_link/
 							}
 							if ( $by_post_author ) {
-								echo '<span class="by-post-author">' . __( 'By Post Author', 'twentytwenty' ) . '</span>';
+								echo '<span class="by-post-author">' . __( 'By Post Author', 'SQM' ) . '</span>';
 							}
 							?>
 

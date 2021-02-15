@@ -3,8 +3,8 @@
  * Customizer settings for this theme.
  *
  * @package WordPress
- * @subpackage Twenty_Twenty
- * @since Twenty Twenty 1.0
+ * @subpackage SQM
+ * @since SQM 1.0
  */
 
 if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
@@ -30,7 +30,7 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 				'blogname',
 				array(
 					'selector'        => '.site-title a',
-					'render_callback' => 'twentytwenty_customize_partial_blogname',
+					'render_callback' => 'SQM_customize_partial_blogname',
 				)
 			);
 
@@ -38,7 +38,7 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 				'blogdescription',
 				array(
 					'selector'        => '.site-description',
-					'render_callback' => 'twentytwenty_customize_partial_blogdescription',
+					'render_callback' => 'SQM_customize_partial_blogdescription',
 				)
 			);
 
@@ -46,7 +46,7 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 				'custom_logo',
 				array(
 					'selector'        => '.header-titles [class*=site-]:not(.site-description)',
-					'render_callback' => 'twentytwenty_customize_partial_site_logo',
+					'render_callback' => 'SQM_customize_partial_site_logo',
 				)
 			);
 
@@ -54,7 +54,7 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 				'retina_logo',
 				array(
 					'selector'        => '.header-titles [class*=site-]:not(.site-description)',
-					'render_callback' => 'twentytwenty_customize_partial_site_logo',
+					'render_callback' => 'SQM_customize_partial_site_logo',
 				)
 			);
 
@@ -78,8 +78,8 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 					'type'        => 'checkbox',
 					'section'     => 'title_tagline',
 					'priority'    => 10,
-					'label'       => __( 'Retina logo', 'twentytwenty' ),
-					'description' => __( 'Scales the logo to half its uploaded size, making it sharp on high-res screens.', 'twentytwenty' ),
+					'label'       => __( 'Retina logo', 'SQM' ),
+					'description' => __( 'Scales the logo to half its uploaded size, making it sharp on high-res screens.', 'SQM' ),
 				)
 			);
 
@@ -98,7 +98,7 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 					$wp_customize,
 					'header_footer_background_color',
 					array(
-						'label'   => __( 'Header &amp; Footer Background Color', 'twentytwenty' ),
+						'label'   => __( 'Header &amp; Footer Background Color', 'SQM' ),
 						'section' => 'colors',
 					)
 				)
@@ -120,10 +120,10 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 				array(
 					'type'    => 'radio',
 					'section' => 'colors',
-					'label'   => __( 'Primary Color', 'twentytwenty' ),
+					'label'   => __( 'Primary Color', 'SQM' ),
 					'choices' => array(
-						'default' => _x( 'Default', 'color', 'twentytwenty' ),
-						'custom'  => _x( 'Custom', 'color', 'twentytwenty' ),
+						'default' => _x( 'Default', 'color', 'SQM' ),
+						'custom'  => _x( 'Custom', 'color', 'SQM' ),
 					),
 				)
 			);
@@ -134,7 +134,7 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 			 * The control is a hue-only colorpicker, and there is a separate setting that holds values
 			 * for other colors calculated based on the selected hue and various background-colors on the page.
 			 *
-			 * @since Twenty Twenty 1.0
+			 * @since SQM 1.0
 			 */
 
 			// Add the setting for the hue colorpicker.
@@ -180,7 +180,7 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 					array(
 						'section'         => 'colors',
 						'settings'        => 'accent_hue',
-						'description'     => __( 'Apply a custom color for links, buttons, featured images.', 'twentytwenty' ),
+						'description'     => __( 'Apply a custom color for links, buttons, featured images.', 'SQM' ),
 						'mode'            => 'hue',
 						'active_callback' => function() use ( $wp_customize ) {
 							return ( 'custom' === $wp_customize->get_setting( 'accent_hue_active' )->value() );
@@ -199,7 +199,7 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 			$wp_customize->add_section(
 				'options',
 				array(
-					'title'      => __( 'Theme Options', 'twentytwenty' ),
+					'title'      => __( 'Theme Options', 'SQM' ),
 					'priority'   => 40,
 					'capability' => 'edit_theme_options',
 				)
@@ -222,7 +222,7 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 					'type'     => 'checkbox',
 					'section'  => 'options',
 					'priority' => 10,
-					'label'    => __( 'Show search in header', 'twentytwenty' ),
+					'label'    => __( 'Show search in header', 'SQM' ),
 				)
 			);
 
@@ -243,7 +243,7 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 					'type'     => 'checkbox',
 					'section'  => 'options',
 					'priority' => 10,
-					'label'    => __( 'Show author bio', 'twentytwenty' ),
+					'label'    => __( 'Show author bio', 'SQM' ),
 				)
 			);
 
@@ -264,10 +264,10 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 					'type'     => 'radio',
 					'section'  => 'options',
 					'priority' => 10,
-					'label'    => __( 'On archive pages, posts show:', 'twentytwenty' ),
+					'label'    => __( 'On archive pages, posts show:', 'SQM' ),
 					'choices'  => array(
-						'full'    => __( 'Full text', 'twentytwenty' ),
-						'summary' => __( 'Summary', 'twentytwenty' ),
+						'full'    => __( 'Full text', 'SQM' ),
+						'summary' => __( 'Summary', 'SQM' ),
 					),
 				)
 			);
@@ -278,9 +278,9 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 			$wp_customize->add_section(
 				'cover_template_options',
 				array(
-					'title'       => __( 'Cover Template', 'twentytwenty' ),
+					'title'       => __( 'Cover Template', 'SQM' ),
 					'capability'  => 'edit_theme_options',
-					'description' => __( 'Settings for the "Cover Template" page template. Add a featured image to use as background.', 'twentytwenty' ),
+					'description' => __( 'Settings for the "Cover Template" page template. Add a featured image to use as background.', 'SQM' ),
 					'priority'    => 42,
 				)
 			);
@@ -302,8 +302,8 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 				array(
 					'type'        => 'checkbox',
 					'section'     => 'cover_template_options',
-					'label'       => __( 'Fixed Background Image', 'twentytwenty' ),
-					'description' => __( 'Creates a parallax effect when the visitor scrolls.', 'twentytwenty' ),
+					'label'       => __( 'Fixed Background Image', 'SQM' ),
+					'description' => __( 'Creates a parallax effect when the visitor scrolls.', 'SQM' ),
 				)
 			);
 
@@ -339,7 +339,7 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 			$wp_customize->add_setting(
 				'cover_template_overlay_background_color',
 				array(
-					'default'           => twentytwenty_get_color_for_area( 'content', 'accent' ),
+					'default'           => SQM_get_color_for_area( 'content', 'accent' ),
 					'sanitize_callback' => 'sanitize_hex_color',
 				)
 			);
@@ -349,8 +349,8 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 					$wp_customize,
 					'cover_template_overlay_background_color',
 					array(
-						'label'       => __( 'Overlay Background Color', 'twentytwenty' ),
-						'description' => __( 'The color used for the overlay. Defaults to the accent color.', 'twentytwenty' ),
+						'label'       => __( 'Overlay Background Color', 'SQM' ),
+						'description' => __( 'The color used for the overlay. Defaults to the accent color.', 'SQM' ),
 						'section'     => 'cover_template_options',
 					)
 				)
@@ -371,8 +371,8 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 					$wp_customize,
 					'cover_template_overlay_text_color',
 					array(
-						'label'       => __( 'Overlay Text Color', 'twentytwenty' ),
-						'description' => __( 'The color used for the text in the overlay.', 'twentytwenty' ),
+						'label'       => __( 'Overlay Text Color', 'SQM' ),
+						'description' => __( 'The color used for the text in the overlay.', 'SQM' ),
 						'section'     => 'cover_template_options',
 					)
 				)
@@ -392,11 +392,11 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 			$wp_customize->add_control(
 				'cover_template_overlay_opacity',
 				array(
-					'label'       => __( 'Overlay Opacity', 'twentytwenty' ),
-					'description' => __( 'Make sure that the contrast is high enough so that the text is readable.', 'twentytwenty' ),
+					'label'       => __( 'Overlay Opacity', 'SQM' ),
+					'description' => __( 'Make sure that the contrast is high enough so that the text is readable.', 'SQM' ),
 					'section'     => 'cover_template_options',
 					'type'        => 'range',
-					'input_attrs' => twentytwenty_customize_opacity_range(),
+					'input_attrs' => SQM_customize_opacity_range(),
 				)
 			);
 
@@ -414,7 +414,7 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 		 *
 		 * @static
 		 * @access public
-		 * @since Twenty Twenty 1.0
+		 * @since SQM 1.0
 		 * @param array $value The value we want to sanitize.
 		 * @return array Returns sanitized value. Each item in the array gets sanitized separately.
 		 */
@@ -466,32 +466,32 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 /**
  * PARTIAL REFRESH FUNCTIONS
  * */
-if ( ! function_exists( 'twentytwenty_customize_partial_blogname' ) ) {
+if ( ! function_exists( 'SQM_customize_partial_blogname' ) ) {
 	/**
 	 * Render the site title for the selective refresh partial.
 	 */
-	function twentytwenty_customize_partial_blogname() {
+	function SQM_customize_partial_blogname() {
 		bloginfo( 'name' );
 	}
 }
 
-if ( ! function_exists( 'twentytwenty_customize_partial_blogdescription' ) ) {
+if ( ! function_exists( 'SQM_customize_partial_blogdescription' ) ) {
 	/**
 	 * Render the site description for the selective refresh partial.
 	 */
-	function twentytwenty_customize_partial_blogdescription() {
+	function SQM_customize_partial_blogdescription() {
 		bloginfo( 'description' );
 	}
 }
 
-if ( ! function_exists( 'twentytwenty_customize_partial_site_logo' ) ) {
+if ( ! function_exists( 'SQM_customize_partial_site_logo' ) ) {
 	/**
 	 * Render the site logo for the selective refresh partial.
 	 *
 	 * Doing it this way so we don't have issues with `render_callback`'s arguments.
 	 */
-	function twentytwenty_customize_partial_site_logo() {
-		twentytwenty_site_logo();
+	function SQM_customize_partial_site_logo() {
+		SQM_site_logo();
 	}
 }
 
@@ -501,7 +501,7 @@ if ( ! function_exists( 'twentytwenty_customize_partial_site_logo' ) ) {
  *
  * @return array Array containing attribute names and their values.
  */
-function twentytwenty_customize_opacity_range() {
+function SQM_customize_opacity_range() {
 	/**
 	 * Filters the input attributes for opacity
 	 *
@@ -514,7 +514,7 @@ function twentytwenty_customize_opacity_range() {
 	 * }
 	 */
 	return apply_filters(
-		'twentytwenty_customize_opacity_range',
+		'SQM_customize_opacity_range',
 		array(
 			'min'  => 0,
 			'max'  => 90,

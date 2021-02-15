@@ -7,8 +7,8 @@
  * Based on a solution in WP Rig.
  *
  * @package WordPress
- * @subpackage Twenty_Twenty
- * @since Twenty Twenty 1.0
+ * @subpackage SQM
+ * @since SQM 1.0
  */
 
 if ( ! class_exists( 'TwentyTwenty_Script_Loader' ) ) {

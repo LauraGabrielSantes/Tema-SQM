@@ -1,5 +1,5 @@
 {
-	"name": "twentytwenty",
+	"name": "SQM",
 	"version": "1.6.0",
 	"description": "Default WP Theme",
 	"author": "The WordPress Contributors",
@@ -7,16 +7,9 @@
 	"keywords": [
 		"WordPress",
 		"Theme",
-		"TwentyTwenty"
+		"SQM"
 	],
-	"homepage": "https://github.com/wordpress/twentytwenty#readme",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/wordpress/twentytwenty.git"
-	},
-	"bugs": {
-		"url": "https://github.com/wordpress/twentytwenty/issues"
-	},
+
 	"devDependencies": {
 		"@wordpress/browserslist-config": "^2.6.0",
 		"@wordpress/scripts": "^5.0.0",

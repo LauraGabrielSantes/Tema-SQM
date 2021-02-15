@@ -1,4 +1,4 @@
-=== Twenty Twenty ===
+=== SQM ===
 Contributors: the WordPress team
 Tested up to: 5.6
 Stable tag: 1.6
@@ -59,8 +59,8 @@ Initial release
 
 == Copyright ==
 
-Twenty Twenty WordPress Theme, Copyright 2019-2020 WordPress.org
-Twenty Twenty is distributed under the terms of the GNU GPL.
+SQM WordPress Theme, Copyright 2019-2020 WordPress.org
+SQM is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -72,10 +72,10 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
-Twenty Twenty is derived from the Chaplin Theme, Copyright 2019 Anders Norén
+SQM is derived from the Chaplin Theme, Copyright 2019 Anders Norén
 Chaplin Theme is distributed under the terms of the GNU GPL version 2.0
 
-Twenty Twenty bundles the following third-party resources:
+SQM bundles the following third-party resources:
 
 Illustrations by Tammie Lister
 License: Creative Commons Zero (CC0), https://creativecommons.org/publicdomain/zero/1.0/
@@ -85,7 +85,7 @@ Copyright (c) 2016-2019 The Inter Project Authors (me@rsms.me)
 License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
 Source: https://rsms.me/inter/
 
-Bespoke Icons Created For Twenty Twenty
+Bespoke Icons Created For SQM
 License: Creative Commons Zero (CC0), https://creativecommons.org/publicdomain/zero/1.0/
 List of bespoke icons:
 - Search icon
@@ -113,16 +113,16 @@ License: GPLv2
 Source: https://wordpress.org/themes/twentynineteen/
 Included as part of the following classes and functions:
 - TwentyTwenty_SVG_Icons
-- twentytwenty_the_theme_svg()
-- twentytwenty_get_theme_svg()
-- twentytwenty_nav_menu_social_icons()
+- SQM_the_theme_svg()
+- SQM_get_theme_svg()
+- SQM_nav_menu_social_icons()
 
 Code from Twenty Seventeen
 Copyright (c) 2016-2020 WordPress.org
 License: GPLv2
 Source: https://wordpress.org/themes/twentyseventeen/
 Included as part of the following classes and functions:
-- twentytwenty_unique_id()
+- SQM_unique_id()
 
 Underscores
 https://underscores.me/, (C) 2012-2020 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)

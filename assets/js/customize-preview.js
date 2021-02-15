@@ -4,7 +4,7 @@
  *
  * Contains handlers to make Theme Customizer preview reload changes asynchronously.
  *
- * @since Twenty Twenty 1.0
+ * @since SQM 1.0
  */
 
 ( function( $, api, _ ) {
@@ -146,7 +146,7 @@
 	/**
 	 * Add styles to elements in the preview pane.
 	 *
-	 * @since Twenty Twenty 1.0
+	 * @since SQM 1.0
 	 *
 	 * @param {string} context The area for which we want to generate styles. Can be for example "content", "header" etc.
 	 *
@@ -155,12 +155,12 @@
 	function twentyTwentyGenerateColorA11yPreviewStyles( context ) {
 		// Get the accessible colors option.
 		var a11yColors = window.parent.wp.customize( 'accent_accessible_colors' ).get(),
-			stylesheedID = 'twentytwenty-customizer-styles-' + context,
+			stylesheedID = 'SQM-customizer-styles-' + context,
 			stylesheet = $( '#' + stylesheedID ),
 			styles = '';
 		// If the stylesheet doesn't exist, create it and append it to <head>.
 		if ( ! stylesheet.length ) {
-			$( '#twentytwenty-style-inline-css' ).after( '<style id="' + stylesheedID + '"></style>' );
+			$( '#SQM-style-inline-css' ).after( '<style id="' + stylesheedID + '"></style>' );
 			stylesheet = $( '#' + stylesheedID );
 		}
 		if ( ! _.isUndefined( a11yColors[ context ] ) ) {

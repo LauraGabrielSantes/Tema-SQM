@@ -3,8 +3,8 @@
  * Custom icons for this theme.
  *
  * @package WordPress
- * @subpackage Twenty_Twenty
- * @since Twenty Twenty 1.0
+ * @subpackage SQM
+ * @since SQM 1.0
  */
 
 if ( ! class_exists( 'TwentyTwenty_SVG_Icons' ) ) {
@@ -31,27 +31,27 @@ if ( ! class_exists( 'TwentyTwenty_SVG_Icons' ) ) {
 			}
 
 			/**
-			 * Filters Twenty Twenty's array of icons.
+			 * Filters SQM's array of icons.
 			 *
 			 * The dynamic portion of the hook name, `$group`, refers to
 			 * the name of the group of icons, either "ui" or "social".
 			 *
-			 * @since Twenty Twenty 1.5
+			 * @since SQM 1.5
 			 *
 			 * @param array $arr Array of icons.
 			 */
-			$arr = apply_filters( "twentytwenty_svg_icons_{$group}", $arr );
+			$arr = apply_filters( "SQM_svg_icons_{$group}", $arr );
 
 			/**
 			 * Filters an SVG icon's color.
 			 *
-			 * @since Twenty Twenty 1.5
+			 * @since SQM 1.5
 			 *
 			 * @param string $color The icon color.
 			 * @param string $icon  The icon name.
 			 * @param string $group The icon group.
 			 */
-			$color = apply_filters( 'twentytwenty_svg_icon_color', $color, $icon, $group );
+			$color = apply_filters( 'SQM_svg_icon_color', $color, $icon, $group );
 
 			if ( array_key_exists( $icon, $arr ) ) {
 				$repl = '<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" ';
@@ -77,25 +77,25 @@ if ( ! class_exists( 'TwentyTwenty_SVG_Icons' ) ) {
 				$regex_map = array();
 
 				/**
-				 * Filters Twenty Twenty's array of domain mappings for social icons.
+				 * Filters SQM's array of domain mappings for social icons.
 				 *
 				 * By default, each Icon ID is matched against a .com TLD. To override this behavior,
 				 * specify all the domains it covers (including the .com TLD too, if applicable).
 				 *
-				 * @since Twenty Twenty 1.5
+				 * @since SQM 1.5
 				 *
 				 * @param array $social_icons_map Array of default social icons.
 				 */
-				$map = apply_filters( 'twentytwenty_social_icons_map', self::$social_icons_map );
+				$map = apply_filters( 'SQM_social_icons_map', self::$social_icons_map );
 
 				/**
-				 * Filters Twenty Twenty's array of social icons.
+				 * Filters SQM's array of social icons.
 				 *
-				 * @since Twenty Twenty 1.5
+				 * @since SQM 1.5
 				 *
 				 * @param array $social_icons Array of default social icons.
 				 */
-				$social_icons = apply_filters( 'twentytwenty_svg_icons_social', self::$social_icons );
+				$social_icons = apply_filters( 'SQM_svg_icons_social', self::$social_icons );
 
 				foreach ( array_keys( $social_icons ) as $icon ) {
 					$domains            = array_key_exists( $icon, $map ) ? $map[ $icon ] : array( sprintf( '%s.com', $icon ) );
@@ -106,7 +106,7 @@ if ( ! class_exists( 'TwentyTwenty_SVG_Icons' ) ) {
 			}
 			foreach ( $regex_map as $icon => $regex ) {
 				if ( preg_match( $regex, $uri ) ) {
-					return twentytwenty_get_theme_svg( $icon, 'social' );
+					return SQM_get_theme_svg( $icon, 'social' );
 				}
 			}
 			return null;

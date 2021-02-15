@@ -1,13 +1,13 @@
 <?php
 /**
- * Twenty Twenty SVG Icon helper functions
+ * SQM SVG Icon helper functions
  *
  * @package WordPress
- * @subpackage Twenty_Twenty
- * @since Twenty Twenty 1.0
+ * @subpackage SQM
+ * @since SQM 1.0
  */
 
-if ( ! function_exists( 'twentytwenty_the_theme_svg' ) ) {
+if ( ! function_exists( 'SQM_the_theme_svg' ) ) {
 	/**
 	 * Output and Get Theme SVG.
 	 * Output and get the SVG markup for an icon in the TwentyTwenty_SVG_Icons class.
@@ -16,12 +16,12 @@ if ( ! function_exists( 'twentytwenty_the_theme_svg' ) ) {
 	 * @param string $group The group the icon belongs to.
 	 * @param string $color Color code.
 	 */
-	function twentytwenty_the_theme_svg( $svg_name, $group = 'ui', $color = '' ) {
-		echo twentytwenty_get_theme_svg( $svg_name, $group, $color ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Escaped in twentytwenty_get_theme_svg().
+	function SQM_the_theme_svg( $svg_name, $group = 'ui', $color = '' ) {
+		echo SQM_get_theme_svg( $svg_name, $group, $color ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Escaped in SQM_get_theme_svg().
 	}
 }
 
-if ( ! function_exists( 'twentytwenty_get_theme_svg' ) ) {
+if ( ! function_exists( 'SQM_get_theme_svg' ) ) {
 
 	/**
 	 * Get information about the SVG icon.
@@ -30,7 +30,7 @@ if ( ! function_exists( 'twentytwenty_get_theme_svg' ) ) {
 	 * @param string $group The group the icon belongs to.
 	 * @param string $color Color code.
 	 */
-	function twentytwenty_get_theme_svg( $svg_name, $group = 'ui', $color = '' ) {
+	function SQM_get_theme_svg( $svg_name, $group = 'ui', $color = '' ) {
 
 		// Make sure that only our allowed tags and attributes are included.
 		$svg = wp_kses(
