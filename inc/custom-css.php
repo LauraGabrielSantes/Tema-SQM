@@ -174,15 +174,17 @@ if ( ! function_exists( 'SQM_get_customizer_css' ) ) {
 				SQM_generate_css( 'body#tinymce.wp-editor.content', 'color', $body );
 			}
 
-			 Secondary color.
+			// Secondary color.
 			if ( $secondary && $secondary !== $secondary_default ) {
 				SQM_generate_css( 'body#tinymce.wp-editor.content hr:not(.is-style-dots), body#tinymce.wp-editor.content cite, body#tinymce.wp-editor.content figcaption, body#tinymce.wp-editor.content .wp-caption-text, body#tinymce.wp-editor.content .wp-caption-dd, body#tinymce.wp-editor.content .gallery-caption', 'color', $secondary );
 			}
+
 			// Borders color.
 			if ( $borders && $borders !== $borders_default ) {
 				SQM_generate_css( 'body#tinymce.wp-editor.content pre, body#tinymce.wp-editor.content hr, body#tinymce.wp-editor.content fieldset,body#tinymce.wp-editor.content input, body#tinymce.wp-editor.content textarea', 'border-color', $borders );
 			}
 		}
+
 		// Return the results.
 		return ob_get_clean();
 
